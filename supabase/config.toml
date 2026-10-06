@@ -1,0 +1,26 @@
+project_id = "netdefender"
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[functions.ingest-alert]
+verify_jwt = false
+
+[functions.block-ip]
+verify_jwt = true
+
+[functions.simulate-traffic]
+verify_jwt = false
+
+[functions.send-notification]
+verify_jwt = false
+
+[functions.evaluate-playbooks]
+verify_jwt = true
+
+[functions.expire-blocks]
+verify_jwt = false
+
+[functions.manage-api-keys]
+verify_jwt = true
